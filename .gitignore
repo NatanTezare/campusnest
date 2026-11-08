@@ -1,0 +1,9 @@
+backend/.venv/
+backend/*.db
+backend/uploads/*
+!backend/uploads/.gitkeep
+__pycache__/
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+.env

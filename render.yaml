@@ -1,0 +1,21 @@
+# Render "Blueprint": describes the backend web service. (The database is on Neon, the frontend on Vercel.)
+services:
+  - type: web
+    name: campusnest-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
+      - key: ENVIRONMENT
+        value: production
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL      # paste the Neon connection string in the Render dashboard
+        sync: false
+      - key: CORS_ORIGINS      # paste your Vercel site URL, e.g. https://campusnest.vercel.app
+        sync: false

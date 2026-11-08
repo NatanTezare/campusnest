@@ -1,0 +1,3 @@
+name,area,distance_km,phone,amenities,rooms,description
+EXAMPLE Sunrise Hostel,Roysambu,0.9,0712345678,WiFi;Security;Water backup,Single room:10500;Twin sharing:7000,Example row - delete me
+EXAMPLE Palm Residence,Mirema,1.4,,WiFi;Kitchen,Studio:15000;Single room:12000:full,Example row - the single room is fully booked
